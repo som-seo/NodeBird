@@ -1,5 +1,4 @@
 const express=require('express');
-const {renderProfile, renderJoin, renderMain}=require('../controllers/page');
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
 const {renderProfile, renderJoin, renderMain, renderHashtag, }=require('../controllers/page');
 

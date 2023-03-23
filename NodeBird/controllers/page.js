@@ -15,10 +15,13 @@ exports.renderMain=async (req, res, next)=>{
                 model: User,
                 attributes: ['id', 'nick'],
             },
-            order: [['createAt', 'DESC']],
+            order: [['createdAt', 'DESC']],
         });
-        res.render('main', {title: 'NodeBird', twits: posts});
-    } catch (error) {
+        res.render('main', {
+            title: 'NodeBird',
+            twits: posts,
+        });
+    } catch (err) {
      console.error(err);
      next(err);   
     }

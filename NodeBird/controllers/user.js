@@ -1,6 +1,6 @@
 const User=require('../models/user');
 
-exports.fllow=async(req, res, next)=>{
+exports.follow=async(req, res, next)=>{
     try {
         const user=await User.findOne({where: {id: req.user.id}});
         if(user){ // req.user.id가 followerId, req.params.id가 followingId
@@ -13,4 +13,4 @@ exports.fllow=async(req, res, next)=>{
         console.error(error);
         next(error);
     }
-}
+};
