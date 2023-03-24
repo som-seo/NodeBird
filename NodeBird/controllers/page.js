@@ -36,7 +36,7 @@ exports.renderHashtag=async(req, res, next)=>{
         const hashtag=await Hashtag.findOne({where: {title: query}});
         let posts=[];
         if(hashtag){
-            posts=await hashtag.getPosts({include: [{model: User}]});
+            posts=await hashtag.getPosts({include: [{model: User}]}); // 만약 해시태그가 있다면 getPosts를 통하여 해시태그를 찾습니다.
         }
         return res.render('main', {
             title: `${query} | NodeBird`,

@@ -6,6 +6,6 @@ const {follow}=require('../controllers/user');
 const router=express.Router();
 
 // POST /user/:id/follow
-router.post('/:id/follow', isLoggedIn, function (req, res, next){follow});
+router.post('/:id/follow', isLoggedIn, follow);
 
 module.exports=router;
