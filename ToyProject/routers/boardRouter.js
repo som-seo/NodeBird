@@ -1,5 +1,5 @@
 import express from "express";
-import {seeBoard, editBoard, deleteBoard, writeBoard} from "../controllers/boardController";
+import {seeBoard, editBoard, deleteBoard, writeBoard} from "../controllers/boardController.js";
 
 const boardRouter=express.Router();
 
